@@ -1,0 +1,48 @@
+table {
+    width: 100%;
+    border-spacing: 0; /* Giữ khoảng cách giữa viền */
+    margin-top: 20px;
+    border-radius: 10px; /* Bo tròn góc */
+    overflow: hidden; /* Đảm bảo không bị lẹm góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
+th, td {
+   
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center !important;
+    vertical-align: middle !important; /* Căn giữa theo chiều dọc */
+}
+th {
+    background-color: #c49a6c;
+    color: white;
+}
+     
+        /* Điều chỉnh độ rộng cột */
+        th:nth-child(6), td:nth-child(6) { width: 15%; } /* Trạng thái */
+        th:nth-child(7), td:nth-child(7) { width: 35%; } /* Hành động */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.pending { background-color: #f8c146; color: #fff; } /* Chờ xác nhận - vàng */
+.rejected { background-color: #dc3545; color: #fff; } /* Đã từ chối - đỏ */
+.completed { background-color: #28a745; color: #fff; } /* Đã hoàn thành - xanh lá */
+.in-progress { background-color: #007bff; color: #fff; } /* Đang tiến hành - xanh dương */
+ /* Nút bấm */
+ .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+}
+.btn i {
+    margin-right: 5px;
+}
+.btn-accept { background-color: #28a745; color: white; }
+.btn-reject { background-color: #dc3545; color: white; }
+.btn-detail { background-color: #007bff; color: white; }

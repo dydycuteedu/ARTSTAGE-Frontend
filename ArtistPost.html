@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="css/artistPost.css">
+<div id="postPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="post-container">
+            <div class="upload-section">
+                <div class="upload-header">
+                    <strong>Đăng ảnh mới</strong>
+                </div>
+                <div class="upload-content">
+                    <img src="images/photoicon.png" alt="Upload">
+                    <p>Kéo ảnh vào đây</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    <button class="upload-button" onclick="document.getElementById('fileInput').click()">Chọn từ máy
+                        tính</button>
+
+                </div>
+            </div>
+
+            <div class="post-info">
+                <!-- <div class="post-header">
+                    <span class="close" onclick="closePopup()">&times;</span>  
+                    </div>  -->
+                <div class="post-body">
+                    <div class="user-info">
+                        <img src="images/avatar.png" alt="Avatar">
+                        <strong>smismkiii</strong>
+                    </div>
+                    <textarea placeholder="nội dung mới..."></textarea>
+                    <div class="tags">
+                        <span class="tag">Thể loại 🏷</span>
+                        <span class="tag">smiski</span>
+                        <span class="tag">cute</span>
+                        <span class="tag free">Free</span>
+                        <span class="tag premium">Premium 👑</span>
+                    </div>
+                </div>
+
+                <div class="post-footer">
+                    <button class="post-button">Đăng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- script popup -->
+<script>
+    function openPopup() {
+        let popup = document.getElementById("postPopup");
+        popup.style.removeProperty("display"); // Xóa !important nếu có
+        popup.style.display = "flex"; // Hiện popup
+    }
+
+
+    function closePopup() {
+        document.getElementById("postPopup").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        const popup = document.getElementById("postPopup");
+        if (event.target === popup) {
+            closePopup();
+        }
+    }
+</script>
+<!-- end popup -->
+<!-- script upload file -->
+<!-- end upload file -->

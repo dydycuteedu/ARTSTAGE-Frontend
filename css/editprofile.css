@@ -1,0 +1,124 @@
+/* Định dạng cho trang comission voi nut tag*/
+.tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .tag:hover {
+    background-color: #0056b3;
+  }
+  .col-auto {
+    white-space: nowrap;
+  }
+  .btn-custom {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Nút "Gửi yêu cầu" */
+.btn-primary.btn-custom {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+/* Hiệu ứng zoom lên khi hover */
+.btn-primary.btn-custom:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Zoom lên */
+}
+
+/* Khi nhấn giữ */
+.btn-primary.btn-custom:active {
+    background-color: #003f7f;
+    transform: scale(0.98); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+/* Nút "Hủy" */
+.btn-cancel {
+    border: 2px solid #ccc;
+    background: white;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #FFA725;
+    color: white;
+    border-color: #FFA725;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Zoom lên */
+}
+
+/* Khi nhấn giữ */
+.btn-cancel:active {
+    background: #FFA725;
+    color: white;
+    border-color: #FFA725;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98); /* Thu nhỏ nhẹ khi nhấn */
+}
+
+
+
+  /* end commision */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #555;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+.form-group {
+    margin-bottom: 16px; /* Đảm bảo khoảng cách đều nhau */
+}
+
+.font-weight-bold {
+    font-family: "Roboto", sans-serif;
+}
+
+.col-md-3 pt-0 {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+
+.avatar {
+    width: 80px;
+    /* Kích thước avatar */
+    height: 80px;
+    border-radius: 50%;
+    /* Biến thành hình tròn */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
+    border: 2px solid #ddd;
+    /* Viền nhẹ cho đẹp */
+}
+
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background: transparent;
+    color: #26B4FF;
+}
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4E5155;
+  }

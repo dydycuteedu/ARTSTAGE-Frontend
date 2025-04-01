@@ -1,0 +1,212 @@
+.popup {
+    display: none ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container chính */
+.post-container {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    /* Chia làm 2 cột bằng nhau */
+    grid-template-rows: auto auto;
+    /* Tự động co giãn theo nội dung */
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* Cột bên trái - Ảnh */
+.photo-section {
+    width: 100%;
+    height: 500px;
+    max-width: 500px; /* Giới hạn tối đa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden; /* Ngăn nội dung tràn ra ngoài */
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%; 
+    
+    object-fit: cover; /* Giữ tỷ lệ và cắt vừa khung */
+}
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50% !important;  /* Đưa nút về giữa ảnh */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    width: 40px; /* Chiều rộng nút */
+    height: 40px; /* Chiều cao nút */
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3); /* Làm nổi bật */
+    border-radius: 50%; /* Bo tròn */
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    font-size: 20px; /* Kích thước mũi tên */
+    color: white; /* Màu trắng */
+}
+/* Đảm bảo ảnh không thay đổi kích thước làm ảnh hưởng đến nút */
+.carousel-inner {
+    position: relative;
+    max-height: 500px; /* Hoặc đặt chiều cao cố định */
+    overflow: hidden;
+}
+
+
+
+/* Cột bên phải - Thông tin bài đăng */
+.post-info {
+    flex-shrink: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+/* Header nut X */
+.post-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Khối nội dung */
+.post-body {
+    transition: none;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Thêm hàng mới bên trong post-info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Ô nhập nội dung */
+.post-info textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Thẻ tags */
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background: #d9a25f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.free {
+    background: #28a745;
+    color: white;
+}
+
+.premium {
+    background: #d9a25f;
+    color: white;
+}
+
+/* Nút đăng */
+
+/* Phần chứa nút */
+.post-footer {
+    border-top: 1px solid #ccc;
+    /* Đường phân cách */
+    display: flex;
+    justify-content: flex-end;
+    /* Đưa nút về bên phải */
+    padding: 10px;
+}
+
+.post-button {
+    width: 80px;
+    background: linear-gradient(to bottom, #D8A353, #d69648);
+    /* Hiệu ứng gradient */
+    color: white;
+    /* Màu chữ đen */
+    font-weight: bold;
+    /* Chữ đậm */
+    border: none;
+    padding: 6px 12px;
+    /* Giảm padding để nút nhỏ hơn */
+    border-radius: 8px;
+    /* Giảm bo góc để phù hợp với kích thước nhỏ */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng nhẹ */
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.post-button:hover {
+    background: linear-gradient(to bottom, #c08030, #a06620);
+    /* Hiệu ứng khi hover */
+    transform: translateY(-2px);
+    /* Nút nhô lên khi hover */
+}
+
+
+/* Responsive: Xếp dọc trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .post-container {
+        grid-template-columns: 1fr;
+        /* 1 cột khi thu nhỏ */
+        grid-template-rows: auto auto;
+        width: 90%;
+    }
+
+    .upload-section,
+    .post-info {
+        grid-column: 1 / 2;
+        grid-row: auto;
+        width: 100%;
+    }
+}

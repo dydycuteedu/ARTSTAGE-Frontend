@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.row{
+    border: none;
+}
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container {
+    display: grid;
+    
+    height: 100vh;
+}
+
+/* Căn chỉnh content */
+.main-content {
+  
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp content và filter theo chiều dọc */
+    width: 100%;
+    padding: 0;
+}
+
+#filter-container {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    margin-left: calc(100% / 12);
+    /* Dịch sang phải 1 cột */
+}
+
+/* Xóa gạch chân mặc định */
+.dropdown-toggle:hover {
+    text-decoration: none !important;
+}
+
+.dropdown {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+   
+}
+
+/* Ẩn dropdown khi chưa click */
+.dropdown-menu {
+    display: none;
+    /* Ẩn mặc định */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #BDB395;
+}

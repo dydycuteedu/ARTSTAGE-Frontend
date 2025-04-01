@@ -1,0 +1,26 @@
+.transaction-details {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #F1EFEC;
+}
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid white  ;
+}
+.detail-label {
+    font-weight: bold;
+}
+.btn-custom {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.btn-cancel {
+    border: 2px solid #ccc;
+}

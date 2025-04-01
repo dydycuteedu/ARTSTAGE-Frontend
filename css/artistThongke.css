@@ -1,0 +1,55 @@
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Cân đối khoảng cách giữa các phần tử */
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    padding: 10px;
+    border: 2px solid #ccc; /* Viền bao quanh */
+    border-radius: 10px; /* Bo tròn góc */
+}
+
+.stat-item {
+    flex: 1 1 150px; /* Đảm bảo item có kích thước linh hoạt nhưng không quá nhỏ */
+    text-align: center;
+    min-width: 150px; /* Đảm bảo không bị co quá nhỏ */
+    max-width: 250px; /* Giới hạn chiều rộng */
+    padding: 10px;
+    
+    border-radius: 5px; /* Bo góc nhẹ */
+    overflow: hidden; /* Tránh tràn nội dung */
+    text-overflow: ellipsis; /* Nếu nội dung quá dài thì hiển thị dấu '...' */
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+}
+
+.stat-icon {
+    font-size: 24px; /* Điều chỉnh kích thước icon */
+    margin-bottom: 5px; /* Khoảng cách giữa icon và text */
+}
+
+.stat-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+.stat-number {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+/* chinh bieu do*/
+.chart-container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px ;
+}
+
+canvas {
+    
+    max-width: 100% !important;
+    height: auto !important;
+}

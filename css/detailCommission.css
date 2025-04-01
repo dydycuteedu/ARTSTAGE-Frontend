@@ -1,0 +1,58 @@
+.details-container {
+    background: #FFF5E4; /* Màu nền nhẹ */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-group {
+    margin-bottom: 15px;
+  }
+  
+  .details-label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .details-text {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+/* button custom  */
+.btn-custom {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    border: 2px solid #ccc;
+    background: transparent;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #FFA725;
+    color: white;
+    border-color: #FFA725;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Khi bấm vào (click hoặc touch), nút sẽ đổi màu */
+.btn-cancel:active {
+    background: #FFA725 !important;
+    color: white !important;
+    border-color: #FFA725 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}

@@ -1,0 +1,137 @@
+<style>
+    .sidebar {
+       
+        background-color: #fff;
+       padding-right: 0;
+        border-right: 1px solid #ddd;
+        height: 100vh;
+        /* Chiều cao full màn hình */
+        position: sticky;
+        top: 0;
+        /* Giữ sidebar khi cuộn */
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      
+        transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* chinh ava trang ca nhan*/
+    .mini_profile img {
+        width: 24px;
+        /* Điều chỉnh kích thước nhỏ */
+        height: 24px;
+        border-radius: 50%;
+        /* Làm tròn ảnh */
+        object-fit: cover;
+        /* Giữ tỷ lệ và không bị méo */
+    }
+
+    .mini_profile {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        /* Khoảng cách giữa ảnh và chữ */
+    }
+
+    .account-settings-links .list-group-item.active {
+        font-weight: bold !important;
+    }
+
+    html:not(.dark-style) .account-settings-links .list-group-item.active {
+        background: transparent !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        /*border-color: rgba(24, 28, 33, 0.03) !important;    */
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+        color: #4e5155 !important;
+    }
+
+    .material-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+       
+    }
+
+    .material-style .account-settings-links .list-group-item.active {
+        color: #4e5155 !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        border-color: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item.active {
+        color: #fff !important;
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+        color: #4E5155 !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+</style>
+
+
+<nav class="sidebar">
+    <div class="logo">ARTSTAGE</div>
+    <div class="list-group list-group-flush account-settings-links">
+        <a class="list-group-item list-group-item-action">
+            <i class="fas fa-home" href="AdminDashboard.html"></i> Admin Dashboard
+        </a>
+     
+       
+        <a class="list-group-item list-group-item-action">
+            <i class="fas fa-bell"></i> Thông báo
+        </a>
+        <a class="list-group-item list-group-item-action" href="AdminThongKe.html">
+            <i class="fas fa-chart-bar"></i> Thống kê
+        </a>
+        <a class="list-group-item list-group-item-action" href="AdminHistoryTransaction.html">
+            <i class="fas fa-history"></i> Lịch sử giao dịch 
+        </a>
+        <a class="list-group-item list-group-item-action" href="ArtistManagement.html">
+            <i class="fas fa-user-tie"></i> Quản lý Artist 
+        </a>
+        <a class="list-group-item list-group-item-action" href="MemberManagement.html">
+            <i class="fas fa-users"></i> Quản lý Member  
+        </a>
+        <a class="list-group-item list-group-item-action" href="Advertisement.html">
+            <i class="fas fa-bullhorn"></i> Quản lý quảng cáo
+        </a>
+        <a class="list-group-item list-group-item-action" href="EventManagement.html">
+            <i class="fas fa-calendar-alt"></i> Quản lý event 
+        </a>
+       
+        <a class="list-group-item list-group-item-action" href="SetPrice.html">
+            <i class="fas fa-tags"></i> Set giá sản phẩm
+        </a>
+        
+    </div>
+</nav>

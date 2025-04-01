@@ -1,0 +1,136 @@
+<style>
+    .sidebar {
+
+        background-color: #fff;
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        height: 100vh;
+        /* Chiều cao full màn hình */
+        position: sticky;
+        top: 0;
+        /* Giữ sidebar khi cuộn */
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* chinh ava trang ca nhan*/
+    .mini_profile img {
+        width: 24px;
+        /* Điều chỉnh kích thước nhỏ */
+        height: 24px;
+        border-radius: 50%;
+        /* Làm tròn ảnh */
+        object-fit: cover;
+        /* Giữ tỷ lệ và không bị méo */
+    }
+
+    .mini_profile {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        /* Khoảng cách giữa ảnh và chữ */
+    }
+
+    .account-settings-links .list-group-item.active {
+        font-weight: bold !important;
+    }
+
+    html:not(.dark-style) .account-settings-links .list-group-item.active {
+        background: transparent !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        /*border-color: rgba(24, 28, 33, 0.03) !important;    */
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+        color: #4e5155 !important;
+    }
+
+    .material-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+
+    .material-style .account-settings-links .list-group-item.active {
+        color: #4e5155 !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        border-color: rgba(255, 255, 255, 0.03) !important;
+    }
+
+    .dark-style .account-settings-links .list-group-item.active {
+        color: #fff !important;
+    }
+
+    .light-style .account-settings-links .list-group-item.active {
+        color: #4E5155 !important;
+    }
+
+    .light-style .account-settings-links .list-group-item {
+        padding: 0.85rem 1.5rem;
+        border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+</style>
+
+
+<nav class="sidebar">
+    <div class="logo">ARTSTAGE</div>
+    <div class="list-group list-group-flush account-settings-links">
+        <a class="list-group-item list-group-item-action">
+            <i class="fas fa-home" href="Landing.html"></i> Trang chủ
+        </a>
+        <a class="list-group-item list-group-item-action" href="Search.html">
+            <i class="fas fa-search"></i> Tìm kiếm
+        </a>
+        <a class="list-group-item list-group-item-action">
+            <i class="fas fa-compass"></i> Khám phá
+        </a>
+        <a class="list-group-item list-group-item-action" href="messagebox.html">
+            <i class="fas fa-paper-plane"></i> Tin nhắn
+        </a>
+        <a class="list-group-item list-group-item-action">
+            <i class="fas fa-bell"></i> Thông báo
+        </a>
+        <a class="list-group-item list-group-item-action" href="ArtistThongKe.html">
+            <i class="fas fa-chart-bar"></i> Thống kê
+        </a>
+        <a class="list-group-item list-group-item-action" href="HistoryTransaction.html">
+            <i class="fas fa-history"></i> Lịch sử giao dịch 
+        </a>
+        <a class="list-group-item list-group-item-action" href="Commission.html">
+            <i class="fas fa-handshake"></i> Ủy thác 
+        </a>
+        
+        <a class="list-group-item list-group-item-action" id="openPopup">
+            <i class="fas fa-plus-circle"></i> Đăng bài mới
+        </a>
+        <a class="list-group-item list-group-item-action" href="ArtistIndex.html">
+            <i class="fas fa-user"></i> Trang cá nhân
+        </a>
+    </div>
+</nav>

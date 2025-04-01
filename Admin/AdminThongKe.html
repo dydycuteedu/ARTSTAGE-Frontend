@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (Popper.js included) -->
+    <script src="bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- CSS riêng -->
+
+   
+    <link rel="stylesheet" href="css/Dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row no-gutters">
+            <!-- Sidebar chiếm 2 cột -->
+            <div id="sidebar" class="col-2 sidebar">
+                Sidebar
+            </div>
+
+            <!-- Nội dung chính chiếm 9 cột -->
+            <div class="col-10 main-content">
+                <div id="navbar" class="navbar">
+                    navbar
+                </div>
+
+
+                <!-- Thống kê và Giao dịch gần đây -->
+                <div class="dashboard-content row ">
+                    <div class="col-md-10 stats offset-md-1">
+                        <h4>Thống kê trong tuần</h4>
+                        <div class="chart-container">
+                            <canvas id="downloadChart"></canvas> <!-- Đây là nơi chứa biểu đồ -->
+                        </div>
+            
+                        <!-- Nhúng thư viện Chart.js -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            // Dữ liệu biểu đồ
+                            const ctx = document.getElementById('downloadChart').getContext('2d');
+                            new Chart(ctx, {
+                                type: 'bar', // Chuyển sang biểu đồ cột
+                                data: {
+                                    labels: ['Ngày 1', 'Ngày 2', 'Ngày 3', 'Ngày 4', 'Ngày 5', 'Ngày 6'],
+                                    datasets: [{
+                                        label: 'Lượt tải',
+                                        data: [50, 120, 90, 150, 200, 320],
+                                        backgroundColor: 'rgba(214, 152, 41, 0.9)', // Màu giống trong ảnh
+                                        borderColor: 'rgba(214, 152, 41, 1)',
+                                        borderWidth: 1,
+                                        borderRadius: 50, // Bo tròn đầu trên và dưới tối đa
+                                        barPercentage: 0.2, // Thu nhỏ chiều rộng cột để trông giống hình
+                                        categoryPercentage: 0.5 // Điều chỉnh khoảng cách giữa các cột
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    layout: {
+                                        padding: {
+                                            top: 30, // Khoảng cách phía trên
+                                            bottom: 50, // Khoảng cách phía dưới
+                                            left: 30,  // Khoảng cách bên trái
+                                            right: 30  // Khoảng cách bên phải
+                                        }
+                                    },
+                                    plugins: {
+                                        legend: {
+                                            labels: {
+                                                font: {
+                                                    size: 20 // Kích thước chữ trong chú thích (Legend)
+                                                }
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        x: {
+                                            ticks: {
+                                                font: {
+                                                    size: 18 // Kích thước số trên trục X
+                                                }
+                                            }
+                                        },
+                                        y: {
+                                            ticks: {
+                                                font: {
+                                                    size: 18 // Kích thước số trên trục Y
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function loadPage(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(error => console.error("Lỗi tải trang:", error));
+        }
+
+        loadPage("sidebar", "_Adminsidebar.html");
+        loadPage("navbar", "_navbar.html");
+
+    </script>
+    <!-- Bootstrap JS (Popper.js included) -->
+    <script src="bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script de ve bieu do -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- end script bieu do -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+
+</body>
+
+
+</html>
