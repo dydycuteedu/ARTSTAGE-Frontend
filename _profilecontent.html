@@ -95,10 +95,21 @@
         justify-content: center;
         align-items: center;
         margin-right: 3rem;
+        overflow: hidden;
     }
 
     .profile-image img {
         border-radius: 50%;
+        object-fit: cover;
+        /* Cắt cảnh hình ảnh để vừa khung */
+        width:20rem;
+        /* Đặt chiều rộng */
+        height: 20rem;
+        /* Đảm bảo chiều cao bằng chiều rộng để tạo hình tròn */
+        border-radius: 50%;
+        /* Cắt hình ảnh thành hình tròn */
+        object-fit: cover;
+        /* Cắt cảnh hình ảnh sao cho không bị biến dạng, vừa với khung */
     }
 
     .profile-user-settings,
@@ -148,15 +159,21 @@
     .profile-settings-btn {
         font-size: 3rem !important;
         margin-left: 1rem !important;
-        color: #cc9b52 !important; /* Màu vàng giống trong hình */
-        background: transparent !important; /* Đảm bảo nền trong suốt */
-        border: none !important; /* Xóa viền nếu có */
-        cursor: pointer !important; 
+        color: #cc9b52 !important;
+        /* Màu vàng giống trong hình */
+        background: transparent !important;
+        /* Đảm bảo nền trong suốt */
+        border: none !important;
+        /* Xóa viền nếu có */
+        cursor: pointer !important;
         transition: transform 0.2s ease-in-out !important;
     }
+
     .profile-settings-btn:hover {
-        transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+        transform: scale(1.1);
+        /* Hiệu ứng phóng to nhẹ khi hover */
     }
+
     .profile-stats {
         margin-top: 2.3rem;
     }
@@ -207,9 +224,6 @@
             width: auto;
         }
 
-        .profile-image img {
-            width: 7.7rem;
-        }
 
         .profile-user-settings {
             flex-basis: calc(100% - 10.7rem);
@@ -267,9 +281,9 @@
             display: block;
         }
     }
- 
-    
-    
+
+
+
     /* story css */
     .story-item .image {
         padding: 3px;
@@ -408,8 +422,7 @@
 
         <div class="profile-image">
 
-            <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
-                alt="">
+            <img src="images/image2.png" alt="">
 
         </div>
 
@@ -417,7 +430,7 @@
 
             <h1 class="profile-user-name">janedoe_</h1>
 
-            <a class="btn profile-edit-btn" href="Member-EditProfile.html">Chỉnh sửa trang cá nhân</a>
+            <a class="btn profile-edit-btn" href="editProfile.html">Chỉnh sửa trang cá nhân</a>
 
             <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog"
                     aria-hidden="true"></i></button>
@@ -435,9 +448,9 @@
         <div class="profile-bio">
             <p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet
                 consectetur adipisicing elit 📷✈️🏕️</p>
-            
+
         </div>
-        
+
     </div>
     <!-- End of profile section -->
     <div class="stories-container">

@@ -99,6 +99,16 @@
 
     .profile-image img {
         border-radius: 50%;
+        object-fit: cover;
+        /* Cắt cảnh hình ảnh để vừa khung */
+        width:20rem;
+        /* Đặt chiều rộng */
+        height: 20rem;
+        /* Đảm bảo chiều cao bằng chiều rộng để tạo hình tròn */
+        border-radius: 50%;
+        /* Cắt hình ảnh thành hình tròn */
+        object-fit: cover;
+        /* Cắt cảnh hình ảnh sao cho không bị biến dạng, vừa với khung */
     }
 
     .profile-user-settings,
@@ -270,10 +280,7 @@
             width: auto;
         }
 
-        .profile-image img {
-            width: 7.7rem;
-        }
-
+   
         .profile-user-settings {
             flex-basis: calc(100% - 10.7rem);
             display: flex;
@@ -488,8 +495,7 @@
 
         <div class="profile-image">
 
-            <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
-                alt="">
+            <img src="images/image3.png"alt="">
 
         </div>
 
