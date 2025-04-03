@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.row {
+    border: none;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutters>[class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container {
+    display: grid;
+    margin-right: 0 !important;
+    height: 100vh;
+}
+
+/* Căn chỉnh content */
+.main-content {
+
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp content và filter theo chiều dọc */
+    width: 100%;
+
+    padding: 0;
+}
+
+.dashboard-content {
+
+    padding-top: 0;
+    border-top: 1px solid #ddd;
+}
+
+h4 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    padding-left: 40px;
+}
+
+/* chinh bieu do*/
+.chart-container {
+    border: 1.5px solid #555;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    margin-right: 0;
+    margin-left: 30px;
+    height: 400px;
+    background: #fff;
+    /* Đặt nền để thấy rõ bo tròn */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng để nổi bật */
+    overflow: hidden;
+    /* Tránh bị tràn nội dung */
+}
+
+canvas {
+
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* dieu chinh giao dich gan day*/
+.recent-transactions {
+    border: 1.5px solid #555;
+    border-radius: 20px;
+}

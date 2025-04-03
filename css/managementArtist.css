@@ -1,0 +1,247 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-box {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.box img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+
+.box span {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.box p {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 2px 0 0;
+    color: black;
+}
+
+/* kiem duyet artist */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Gộp viền lại */
+    border-spacing: 0; /* Loại bỏ khoảng cách giữa viền */
+    margin: 20px 0 50px 0; /* Khoảng cách trên & dưới */
+    border-radius: 10px; /* Bo tròn góc */
+    overflow: hidden; /* Đảm bảo viền bo tròn không bị lẹm */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Viền giữa các ô */
+    padding: 10px;
+    text-align: center !important;
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+th {
+    background-color: #c49a6c; /* Màu nền tiêu đề */
+    color: white; /* Chữ trắng */
+}
+
+/* Loại bỏ viền dưới cho hàng cuối cùng */
+tbody tr td {
+    border-bottom: 1px solid #210F37; /* Viền dưới cho tất cả các hàng */
+}
+
+/* Không có viền dưới cho hàng cuối cùng */
+table tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Điều chỉnh độ rộng cột */
+th:nth-child(6),
+td:nth-child(5) {
+    width: 35%;
+}
+
+/* Trạng thái */
+th:nth-child(7),
+td:nth-child(4) {
+    width: 20%;
+}
+
+/* Hành động */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pending {
+    background-color: #f8c146;
+    color: #fff;
+}
+
+/* Chờ xác nhận - vàng */
+.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Đã từ chối - đỏ */
+.completed {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Đã hoàn thành - xanh lá */
+.in-progress {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Đang tiến hành - xanh dương */
+/* Nút bấm */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn-accept {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-detail {
+    background-color: #007bff;
+    color: white;
+}
+
+/* list-artist  */
+.list-artist th:nth-child(5),
+.list-artist td:nth-child(5) {
+    width: 10%;
+    text-align: center;
+}
+
+.list-artist th:nth-child(6),
+.list-artist td:nth-child(6) {
+    width: 20%;
+    text-align: center;
+}
+
+
+
+/* Online - Xanh lá */
+.status.active {
+    color: #28a745;
+    /* Xanh lá */
+}
+
+/* Offline - Đỏ */
+.status.inactive {
+    color: #dc3545;
+    /* Đỏ */
+}
+
+/* Toggle Switch */
+.toggle-container {
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    display: flex;
+
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
