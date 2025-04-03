@@ -10,7 +10,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	<title>ARSTAGE</title>
-	
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ArtStage website </title>
@@ -54,45 +54,46 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- css rieng -->
-	 <link rel="stylesheet" href="css/Landing.css">
+	<link rel="stylesheet" href="css/Landing.css">
 </head>
 <style>
 	/* Carousel*/
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-}
+	.carousel {
+		position: relative;
+		width: 100%;
+		height: 60vh;
+		overflow: hidden;
+	}
 
-.slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    animation: slide 30s infinite;
-}
+	.slides {
+		display: flex;
+		width: 300%;
+		height: 100%;
+		animation: slide 30s infinite;
+	}
 
-.slide {
-    width: 100%;
-    height: 60vh;
-    flex-shrink: 0;
-    background-size: contain;
-    background-position: center;
-    position: relative;
-}
+	.slide {
+		width: 100%;
+		height: 60vh;
+		flex-shrink: 0;
+		background-size: contain;
+		background-position: center;
+		position: relative;
+	}
 
-.slide:nth-child(1) {
-    background-image: url('images/header.jpg');
-}
+	.slide:nth-child(1) {
+		background-image: url('images/header.jpg');
+	}
 
-.slide:nth-child(2) {
-    background-image: url('images/img_bg_2.jpg');
-}
+	.slide:nth-child(2) {
+		background-image: url('images/img_bg_2.jpg');
+	}
 
-.slide:nth-child(3) {
-    background-image: url('images/img_bg_3.jpg');
-}
+	.slide:nth-child(3) {
+		background-image: url('images/img_bg_3.jpg');
+	}
 </style>
+
 <body>
 
 	<!-- Header mở rộng xuống dưới -->
@@ -115,17 +116,22 @@
 			</div>
 
 			<!-- Logo (Căn giữa) -->
-			<h1 class="absolute left-1/2 transform -translate-x-1/2 text-2xl md:text-4xl font-bold text-black" 
-				style="font-family: 'Averia Sans Libre', cursive;" 
-				onclick="window.location.href='Landing.html';">
+			<h1 class="absolute left-1/2 transform -translate-x-1/2 text-2xl md:text-4xl font-bold text-black"
+				style="font-family: 'Averia Sans Libre', cursive;" onclick="window.location.href='Landing.html';">
 				ARSTAGE
 			</h1>
-
 			<!-- Sign in & Register Buttons -->
 			<div class="flex space-x-6 pr-6">
-				<button class="px-6 py-3 text-black bg-white rounded-full font-bold shadow-md">Sign In</button>
-				<button class="px-6 py-3 text-white bg-black rounded-full font-bold shadow-md">Register</button>
+				<button onclick="window.location.href='../Authentication/Login.html'"
+					class="px-6 py-3 text-black bg-white rounded-full font-bold shadow-md">
+					Log In
+				</button>
+				<button onclick="window.location.href='../Authentication/Register.html'"
+					class="px-6 py-3 text-white bg-black rounded-full font-bold shadow-md">
+					Register
+				</button>
 			</div>
+
 
 		</div>
 	</header>
