@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý Artist  </title>
+    <title>Quản lý Artist </title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,7 +21,7 @@
     <!-- CSS riêng -->
 
     <link rel="stylesheet" href="css/Dashboard.css">
-    <link rel="stylesheet" href="css/historyTransaction.css">
+    <link rel="stylesheet" href="css/managementArtist.css">
 </head>
 
 <body>
@@ -31,105 +31,222 @@
             <div id="sidebar" class="col-2 sidebar">
                 Sidebar
             </div>
-           
-            <div class="main-content col-10 ">
+
+            <div class="main-content col-10 pb-5">
                 <div id="navbar" class="navbar">
                     navbar
                 </div>
-               <div class="dashboard-content row">
-               <div class="col-md-10 offset-1 mt-4"> 
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID giao dịch</th>
-                            <th>Ngày Giao Dịch</th>
-                            <th>Tài Khoản</th>
-                            <th>Số Tiền</th>
-                            <th>Trạng Thái</th>
-                            <th>Chi tiết </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#57472839</td>
-                            <td>12/04/2024</td>
-                            <td>Nguyễn A</td>
-                            <td>50.000 VND</td>
-                            <td>Thành Công</td>
-                            <td><a href="AdminTransactionDetail.html " class="detail-icon"><i class="fas fa-info-circle"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>#57472839</td>
-                            <td>05/12/2024</td>
-                            <td>Nguyễn B</td>
-                            <td>50.000 VND</td>
-                            <td>Thành Công</td>
-                            <td><a href="AdminTransactionDetail.html " class="detail-icon"><i class="fas fa-info-circle"></i></a></td>
-                       
-                        </tr>
-                        <tr>
-                            <td>#57472839</td>
-                            <td>07/11/2024</td>
-                            <td>Nguyễn C</td>
-                            <td>50.000 VND</td>
-                            <td>Thành Công</td>
-                            <td><a href="AdminTransactionDetail.html " class="detail-icon"><i class="fas fa-info-circle"></i></a></td>
-                       
-                        </tr>
-                        <tr>
-                            <td>#57472839</td>
-                            <td>05/06/2024</td>
-                            <td>Nguyễn D</td>
-                            <td>50.000 VND</td>
-                            <td>Thành Công</td>
-                            <td><a href="AdminTransactionDetail.html " class="detail-icon"><i class="fas fa-info-circle"></i></a></td>
-                       
-                        </tr>
-                        <tr>
-                            <td>#57472839</td>
-                            <td>12/10/2024</td>
-                            <td>Nguyễn E</td>
-                            <td>50.000 VND</td>
-                            <td>Thành Công</td>
-                            <td><a href="AdminTransactionDetail.html " class="detail-icon"><i class="fas fa-info-circle"></i></a></td>
-                       
-                        </tr>
-                    </tbody>
-                </table>
-               </div>
-               </div>
+                <div class="dashboard-content row">
+                    <div class="col-md-10 offset-1 mt-4">
+                        <div class="dashboard-box">
+                            <div class="box">
+                                <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Member">
+                                <div class="text">
+                                    <span>Member mới</span>
+                                    <p>12,750</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Artist">
+                                <div class="text">
+                                    <span>Artist mới</span>
+                                    <p>1,200</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25619.png" alt="Bài Viết">
+                                <div class="text">
+                                    <span>Bài viết mới</span>
+                                    <p>1,200</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2362/2362372.png" alt="Tranh">
+                                <div class="text">
+                                    <span>Tranh được bán</span>
+                                    <p>1,920</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- danh sach duyet Artist -->
+                        <div class="approve-artist">
+                            <h3 class="mt-4 pb-2 fw-bold"> Kiểm duyệt Artist </h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Ngày gửi đơn</th>
+                                        <th>Tên Artist</th>
+                                        <th>Trạng Thái</th>
+                                        <th>Hành Động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>12/04/2024</td>
+                                        <td>Nguyễn A</td>
+
+                                        <td><span class="status pending">Chờ xác nhận</span></td>
+                                        <td>
+                                            <button class="btn btn-accept"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-reject"><i class="fas fa-times"></i></button>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailRegister.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>12/04/2024</td>
+                                        <td>Nguyễn A</td>
+
+                                        <td><span class="status pending">Chờ xác nhận</span></td>
+                                        <td>
+                                            <button class="btn btn-accept"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-reject"><i class="fas fa-times"></i></button>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailRegister.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>12/04/2024</td>
+                                        <td>Nguyễn A</td>
+
+                                        <td><span class="status pending">Chờ xác nhận</span></td>
+                                        <td>
+                                            <button class="btn btn-accept"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-reject"><i class="fas fa-times"></i></button>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailRegister.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>12/04/2024</td>
+                                        <td>Nguyễn A</td>
+
+                                        <td><span class="status pending">Chờ xác nhận</span></td>
+                                        <td>
+                                            <button class="btn btn-accept"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-reject"><i class="fas fa-times"></i></button>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailRegister.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="list-artist">
+                            <h3 class="mt-4 pb-2 fw-bold">Danh sách Artist</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Tên Artist</th>
+                                        <th>Ngày tham gia</th>
+                                        <th>Trạng Thái</th>
+                                        <th>Quản lý</th>
+                                        <th>Chi tiết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>Nguyễn A</td>
+                                        <td>12/04/2024</td>
+                                        <td><span class="status active">Online</span></td>
+                                        <td>
+                                            <div class="toggle-container">
+                                                <label class="switch">
+                                                    <input type="checkbox" class="toggleSwitch" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailArtist.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                    </tr>
+                                    <tr>
+                                        <td>#2</td>
+                                        <td>Trần B</td>
+                                        <td>15/03/2024</td>
+                                        <td><span class="status inactive">Offline</span></td>
+                                        <td>
+                                            <div class="toggle-container">
+                                                <label class="switch">
+                                                    <input type="checkbox" class="toggleSwitch">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-detail"
+                                                onclick="window.location.href='DetailArtist.html'"><i
+                                                    class="fas fa-info-circle"></i> Chi tiết</button>
+                                    </tr>
+                                </tbody>
+                            </table>
 
 
-
-
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </div>
-    </div>
-    </div>
-    </div>
 
-    <script>
-        function loadPage(id, url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data)
-                .catch(error => console.error("Lỗi tải trang:", error));
-        }
+        <script>
+            function loadPage(id, url) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => document.getElementById(id).innerHTML = data)
+                    .catch(error => console.error("Lỗi tải trang:", error));
+            }
 
-        loadPage("sidebar", "_AdminSidebar.html");
-        loadPage("navbar", "_navbar.html");
-    </script>
-    
-    <!-- Bootstrap JS (Popper.js included) -->
-    <script src="bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            loadPage("sidebar", "_AdminSidebar.html");
+            loadPage("navbar", "_navbar.html");
+        </script>
+        <!-- script để load nút switch -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Lấy tất cả các toggle switch
+                const toggles = document.querySelectorAll(".toggleSwitch");
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Bootstrap 5 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+                toggles.forEach(toggle => {
+                    toggle.addEventListener("change", function () {
+                        const row = this.closest("tr"); // Lấy hàng chứa toggle
+                        const status = row.querySelector(".status"); // Lấy cột trạng thái
+
+                        if (this.checked) {
+                            status.classList.remove("inactive");
+                            status.classList.add("active");
+                            status.textContent = "Online"; // Đổi trạng thái thành Online
+                        } else {
+                            status.classList.remove("active");
+                            status.classList.add("inactive");
+                            status.textContent = "Offline"; // Đổi trạng thái thành Offline
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!-- end switch  -->
+        <!-- Bootstrap JS (Popper.js included) -->
+        <script src="bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap 5 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </body>
 
 

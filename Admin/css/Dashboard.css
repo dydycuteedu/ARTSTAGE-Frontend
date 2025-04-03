@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -24,12 +22,12 @@
 .container {
     display: grid;
     margin-right: 0 !important;
-    height: 100vh !important;
+    height: 100vh;
 }
 
 /* Căn chỉnh content */
 .main-content {
-    min-height: calc(100vh);
+
     display: flex;
     flex-direction: column;
     /* Sắp xếp content và filter theo chiều dọc */
@@ -74,8 +72,9 @@ canvas {
     max-width: 100% !important;
     height: auto !important;
 }
+
 /* dieu chinh giao dich gan day*/
-.recent-transactions{
+.recent-transactions {
     border: 1.5px solid #555;
     border-radius: 20px;
 }
