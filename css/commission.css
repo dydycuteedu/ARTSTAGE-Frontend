@@ -1,37 +1,81 @@
 table {
+    font-size: 13px;
     width: 100%;
-    border-spacing: 0; /* Giữ khoảng cách giữa viền */
-    margin-top: 20px;
+    border-collapse: collapse; /* Gộp viền lại */
+    border-spacing: 0; /* Loại bỏ khoảng cách giữa viền */
+    margin: 20px 0 50px 0; /* Khoảng cách trên & dưới */
     border-radius: 10px; /* Bo tròn góc */
-    overflow: hidden; /* Đảm bảo không bị lẹm góc */
+    overflow: hidden; /* Đảm bảo viền bo tròn không bị lẹm */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
 }
+
 th, td {
-   
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Viền giữa các ô */
     padding: 10px;
     text-align: center !important;
-    vertical-align: middle !important; /* Căn giữa theo chiều dọc */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
 }
+
 th {
-    background-color: #c49a6c;
-    color: white;
+    background-color: #c49a6c; /* Màu nền tiêu đề */
+    color: white; /* Chữ trắng */
 }
-     
-        /* Điều chỉnh độ rộng cột */
-        th:nth-child(6), td:nth-child(6) { width: 15%; } /* Trạng thái */
-        th:nth-child(7), td:nth-child(7) { width: 35%; } /* Hành động */
+
+/* Loại bỏ viền dưới cho hàng cuối cùng */
+tbody tr td {
+    border-bottom: 1px solid #210F37; /* Viền dưới cho tất cả các hàng */
+}
+
+/* Không có viền dưới cho hàng cuối cùng */
+table tr:last-child td {
+    border-bottom: none;
+}   
+
+/* Điều chỉnh độ rộng cột */
+th:nth-child(6),
+td:nth-child(6) {
+    width: 19%;
+}
+
+/* Trạng thái */
+th:nth-child(7),
+td:nth-child(7) {
+    width: 30%;
+}
+
+/* Hành động */
 .status {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
 }
-.pending { background-color: #f8c146; color: #fff; } /* Chờ xác nhận - vàng */
-.rejected { background-color: #dc3545; color: #fff; } /* Đã từ chối - đỏ */
-.completed { background-color: #28a745; color: #fff; } /* Đã hoàn thành - xanh lá */
-.in-progress { background-color: #007bff; color: #fff; } /* Đang tiến hành - xanh dương */
- /* Nút bấm */
- .btn {
+
+.pending {
+    background-color: #f8c146;
+    color: #fff;
+}
+
+/* Chờ xác nhận - vàng */
+.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Đã từ chối - đỏ */
+.completed {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Đã hoàn thành - xanh lá */
+.in-progress {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Đang tiến hành - xanh dương */
+/* Nút bấm */
+.btn {
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -40,9 +84,22 @@ th {
     display: flex;
     align-items: center;
 }
+
 .btn i {
     margin-right: 5px;
 }
-.btn-accept { background-color: #28a745; color: white; }
-.btn-reject { background-color: #dc3545; color: white; }
-.btn-detail { background-color: #007bff; color: white; }
+
+.btn-accept {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-detail {
+    background-color: #007bff;
+    color: white;
+}

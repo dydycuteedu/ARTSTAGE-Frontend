@@ -1,53 +1,27 @@
-
 table {
     width: 100%;
     border-collapse: collapse;
-    /* Gộp viền lại */
-    border-spacing: 0;
-    /* Loại bỏ khoảng cách giữa viền */
-    margin: 20px 0 50px 0;
-    /* Khoảng cách trên & dưới */
+    margin-top: 10px;
     border-radius: 10px;
-    /* Bo tròn góc */
     overflow: hidden;
-    /* Đảm bảo viền bo tròn không bị lẹm */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Hiệu ứng bóng nhẹ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-th,
-td {
-    border: 1px solid #ddd;
-    /* Viền giữa các ô */
+th, td {
+    border: 1px solid #eee;
     padding: 10px;
-    text-align: center !important;
-    vertical-align: middle;
-    /* Căn giữa theo chiều dọc */
-
+    text-align: left;
 }
-
 th {
     background-color: #c49a6c;
-    /* Màu nền tiêu đề */
     color: white;
-    /* Chữ trắng */
 }
-
-/* Loại bỏ viền dưới cho hàng cuối cùng */
-tbody tr td {
-    border-bottom: 1px solid #210F37;
-    /* Viền dưới cho tất cả các hàng */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
-
-/* Không có viền dưới cho hàng cuối cùng */
-table tr:last-child td {
-    border-bottom: none;
-}
-
 tr:hover {
     background-color: #f1f1f1;
 }
-
 .detail-icon {
     color: #007bff;
     text-decoration: none;
