@@ -6,7 +6,9 @@
   margin: 30px auto;
   gap: 20px;
 }
-
+h2 {
+  padding-bottom: 30px;
+}
 /* Form */
 .registration-form {
   width: 70%;
